@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>NOTIFME</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="Event calendar/css/style.css">
+	<link rel="icon" type="image/png" href="notifmelogo.png">
+	
+
+	</head>
+	<body>
+		
+		
+		<style>
+		body {
+			margin: 0;
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+			font-size: 1rem;
+			font-weight: 400;
+			line-height: 1.5;
+			color: #212529;
+			text-align: left;
+			background-color: #817d7d;
+			background-image: url(network_-_45961\ \(Original\).gif);
+			background-blend-mode: multiply;
+			background-size: cover;
+			
+
+		  }
+		  </style>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section" style="display: grid; place-items: center; opacity: 0.4; color: #fff; font-weight: 900; font-size: 10vh; font-family: sans-serif; text-align: center; margin-bottom: 5%; background-blend-mode: multiply; margin-top: 0;">NOTIFME </h2>
+					<style>
+						@media screen and (max-width: 600px) {
+							.heading-section {
+								font-size: 60px;
+								display: flex;
+								justify-content: center;
+							}
+						}
+					</style>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="content w-100">
+				    <div class="calendar-container">
+	
+				      <div class="calendar"> 
+				        <div class="year-header"> 
+				          <span class="left-button fa fa-chevron-left" id="prev"> </span> 
+				          <span class="year" id="label"></span> 
+				          <span class="right-button fa fa-chevron-right" id="next"> </span>
+				        </div> 
+				        <table class="months-table w-100"> 
+				          <tbody>
+				            <tr class="months-row">
+				              <td class="month">Jan</td> 
+				              <td class="month">Feb</td> 
+				              <td class="month">Mar</td> 
+				              <td class="month">Apr</td> 
+				              <td class="month">May</td> 
+				              <td class="month">Jun</td> 
+				              <td class="month">Jul</td>
+				              <td class="month">Aug</td> 
+				              <td class="month">Sep</td> 
+				              <td class="month">Oct</td>          
+				              <td class="month">Nov</td>
+				              <td class="month">Dec</td>
+				            </tr>
+				          </tbody>
+				        </table> 
+				        
+				        <table class="days-table w-100"> 
+				          <td class="day">Sun</td> 
+				          <td class="day">Mon</td> 
+				          <td class="day">Tue</td> 
+				          <td class="day">Wed</td> 
+				          <td class="day">Thu</td> 
+				          <td class="day">Fri</td> 
+				          <td class="day">Sat</td>
+				        </table> 
+				        <div class="frame"> 
+				          <table class="dates-table w-100"> 
+			              <tbody class="tbody">             
+			              </tbody> 
+				          </table>
+				        </div> 
+				        <button class="button" id="add-button">Add Event</button>
+				      </div>
+				    </div>
+				    <div class="events-container">
+				    </div>
+				    <div class="dialog" id="dialog">
+				        <h2 class="dialog-header"> Add New Event </h2>
+				        <form class="form" id="form">
+				          <div class="form-container" align="center">
+				            <label class="form-label" id="valueFromMyButton" for="name">Event name</label>
+				            <input class="input" type="text" id="name" maxlength="36">
+				            <label class="form-label" id="valueFromMyButton" for="count">Degree Of Priority</label>
+				            <input class="input" type="number" id="count" min="0" max="1000000" maxlength="7">
+				            <input type="button" value="Cancel" class="button" id="cancel-button">
+				            <input type="button" value="OK" class="button button-white" id="ok-button">
+				          </div>
+				        </form>
+				      </div>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<button onclick="redirectToCalendar()" id="evocalendar">Take Me Back</button>
+		<style> #evocalendar {
+
+			  padding: 10px 20px;
+    background-color: #4c5157; /* Set a default dark background color */
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    display: block; /* Ensure button takes full width */
+    margin: 0 auto; /* Center horizontally */}
+	#evocalendar:hover{
+		background-color: #2c3e50; /* Darken the background color on hover */
+	}
+		  </style>
+		<script>  function redirectToCalendar() {
+            // Replace 'calendar.html' with the path to your calendar page
+			window.location.href = 'notifme.html';
+
+        }</script>
+		
+	</section>
+
+	<script src="Event calendar/js/jquery.min.js"></script>
+  <script src="Event calendar/js/popper.js"></script>
+  <script src="Event calendar/js/bootstrap.min.js"></script>
+  <script src="Event calendar/js/main.js"></script>
+
+	</body>
+</html>
+

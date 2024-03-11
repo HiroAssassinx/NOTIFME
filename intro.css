@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins',sans-serif;
+}
+
+body {
+    background: url("network_-_45961\ \(Original\).gif");
+    background-size: cover;
+    background-attachment:fixed;
+}
+#lugo{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items at the top */
+    margin-top: 20px;
+    
+}
+.container {
+    text-align: center;
+    position: relative;
+    margin: 5px auto; /* Simplified margin */
+    background-color: rgba(0, 0, 0, 0.5); /* Black color with some transparency */
+    border-radius: 10px; /* Rounded corners for container */
+    padding: 20px; /* Padding for content inside container */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    width: 400px;
+    height: 700px;
+}
+
+/* Added a pseudo-element for glass effect */
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1); /* Adjusted color to create glass effect */
+    backdrop-filter: blur(10px); /* Advanced glass blur effect */
+    z-index: -1; /* Ensure it stays behind the content */
+    border-radius: inherit; /* Inherit border-radius from the container */
+}
+.container  button{
+    padding: 15px;
+    font-size: 25px;
+    border-radius: 20px;
+    background-color: rgb(247, 248, 248);   /* change color nalang */
+    animation: ease-in-out;
+    cursor: pointer;     
+    transition: 0.1s ease-in;
+    margin-bottom: 10px;
+}
+@media screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+        height: 90;
+    }
+}
+
+.container button:hover {
+    background-color: black;  /* change color nalang */
+    color: white;             /* pwede delete pag ang bgcolor ay light */
+    transition: 0.2s ease-in;
+}
+p {
+    color: aliceblue;
+    font-family: sans-serif;
+    font-weight: bold;
+    
+}
+.containers {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent; /* Transparent background */
+    border-radius: 20%;
+    padding: 20px;
+
+}
+
+.navbar-brand {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+    
+}
+
+.navbar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-nav li {
+    margin-right: 20px;
+    border: 20px;
+}
+
+.navbar-nav li a {
+    position: relative;
+    text-decoration: none;
+    color: black; /* Set the color of the text */
+    overflow: hidden; /* Hide the overflowing pseudo-element */
+}
+
+.navbar-nav li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0; /* Start with zero width */
+    height: 2px; /* Thickness of the underline */
+    background-color: #000; /* Color of the underline */
+    transition: width 0.3s ease; /* Animate width change */
+    transform: scaleX(0); /* Initially scale to zero width */
+    transform-origin: left; /* Scale from left to right */
+}
+
+.navbar-nav li a:hover::after {
+    width: 100%; /* Expand to full width on hover */
+    transform: scaleX(1); /* Scale horizontally to reveal the underline */
+}
